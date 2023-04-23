@@ -22,8 +22,13 @@ void setup() {
 }
 
 void loop() {
+    Serial.println("Relay Module Turn On");
+
     digitalWrite(TRG_PIN, HIGH);
     delay(5000);
+
+    Serial.println("Relay Module Turn Off");
+
     digitalWrite(TRG_PIN, LOW);
     delay(5000);
 }
