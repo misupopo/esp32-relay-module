@@ -19,16 +19,17 @@
 void setup() {
     Serial.begin(115200);
     pinMode(TRG_PIN, OUTPUT);
+    digitalWrite(TRG_PIN, HIGH); // setup 時に off 状態にしないと一瞬チカッとする
 }
 
 void loop() {
     Serial.println("Relay Module Turn On");
 
-    digitalWrite(TRG_PIN, HIGH);
+    digitalWrite(TRG_PIN, LOW);
     delay(5000);
 
     Serial.println("Relay Module Turn Off");
 
-    digitalWrite(TRG_PIN, LOW);
+    digitalWrite(TRG_PIN, HIGH);
     delay(5000);
 }
